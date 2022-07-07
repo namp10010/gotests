@@ -105,14 +105,7 @@ func (r *Render) TestFunction(
 	named bool,
 	parallel bool,
 	params map[string]interface{}) error {
-	return r.tmpls.ExecuteTemplate(w, "function", struct {
-		*models.Function
-		PrintInputs    bool
-		Subtests       bool
-		Parallel       bool
-		Named          bool
-		TemplateParams map[string]interface{}
-	}{
+	return r.tmpls.ExecuteTemplate(w, "function", models.TData{
 		Function:       f,
 		PrintInputs:    printInputs,
 		Subtests:       subtests,

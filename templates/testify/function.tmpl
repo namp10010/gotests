@@ -1,11 +1,11 @@
 {{define "assertion" -}}
-tt.assertion(t, {{if .OnlyReturnsError}}{{template "call" .}}{{else}}err{{end}}
+{{- /*gotype: github.com/cweill/gotests/internal/models.TData*/ -}}
+assert.EqualErrorf(t, tt.wantErr, {{if .OnlyReturnsError}}{{template "call" .}}{{else}}err{{end}}
 {{- if or (not .Subtests) .PrintInputs -}}
     , fmt.Sprintf("{{template "message" .}}", {{template "inputs" .}})
 {{- end -}}
 )
 {{- end}}
-
 
 {{define "equal"}}assert.Equal{{if or (not .Subtests) .PrintInputs}}f{{end}}{{end}}
 
@@ -16,6 +16,7 @@ tt.assertion(t, {{if .OnlyReturnsError}}{{template "call" .}}{{else}}err{{end}}
 {{define "function"}}
 {{- $f := .}}
 
+{{- /*gotype: github.com/cweill/gotests/internal/models.TData*/ -}}
 func {{.TestName}}(t *testing.T) {
 	{{- with .Receiver}}
 		{{- if .IsStruct}}
@@ -51,7 +52,7 @@ func {{.TestName}}(t *testing.T) {
 			{{Want .}} {{.Type}}
 		{{- end}}
 		{{- if .ReturnsError}}
-			assertion assert.ErrorAssertionFunc
+			wantErr error
 		{{- end}}
 	}{
 		// TODO: Add test cases.

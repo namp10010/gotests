@@ -66,6 +66,15 @@ type Receiver struct {
 	Fields []*Field
 }
 
+type TData struct {
+	*Function
+	PrintInputs    bool
+	Subtests       bool
+	Parallel       bool
+	Named          bool
+	TemplateParams map[string]interface{}
+}
+
 type Function struct {
 	Name         string
 	IsExported   bool

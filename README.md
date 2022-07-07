@@ -60,6 +60,14 @@ Available options:
   -template_params      read external parameters to template by json with stdin
 ```
 
+## Make change and test
+To make changes to a template for example templates/testify/function.tmpl
+
+* Change the template
+* Generate the tmpl.go by running `go generate ./templates/gen.go`
+* Install `go install ./...`
+* Run `gotests gotests -all -template testify yourfile.go`
+
 ## Contributions
 
 Contributing guidelines are in [CONTRIBUTING.md](CONTRIBUTING.md).
