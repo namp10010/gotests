@@ -1,5 +1,4 @@
 {{define "assertion" -}}
-    {{- /*gotype: github.com/cweill/gotests/internal/models.TData*/ -}}
     {{- if .ReturnsError}}
         if tt.wantErr != nil {
         {{template "assertError" .}}

@@ -7,7 +7,6 @@
 {{define "function"}}
 {{- $f := .}}
 
-{{- /*gotype: github.com/cweill/gotests/internal/models.TData*/ -}}
 func {{.TestName}}(t *testing.T) {
 	{{- with .Receiver}}
 		{{- if .IsStruct}}
