@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
+	"golang.org/x/tools/imports"
 	"io"
 	"io/ioutil"
 	"os"
@@ -56,11 +57,11 @@ func (o *Options) Process(head *models.Header, funcs []*models.Function) ([]byte
 	}
 
 	// format file
-	//out, err := imports.Process(tf.Name(), b.Bytes(), nil)
-	//if err != nil {
-	//	return nil, fmt.Errorf("imports.Process: %v", err)
-	//}
-	return b.Bytes(), nil
+	out, err := imports.Process(tf.Name(), b.Bytes(), nil)
+	if err != nil {
+		return nil, fmt.Errorf("imports.Process: %v", err)
+	}
+	return out, nil
 }
 
 func (o *Options) providesTemplateData() bool {

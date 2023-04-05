@@ -89,9 +89,9 @@ Which will render the Golang template [function.tmpl](templates/testify/function
 
 This is the starting template that will have reference to other templates.
 
-### Debug import.Process
+### Debug imports.Process
 
-Comment out this and check the output
+Comment out the following in [options.go](internal/output/options.go) and check the output
 ```go
 	//format file
 	out, err := imports.Process(tf.Name(), b.Bytes(), nil)
