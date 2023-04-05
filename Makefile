@@ -1,6 +1,6 @@
 .phony:gen
 gen:
-	go generate ./...
+	go generate ./templates/gen.go
 
 .phony:install
 install:

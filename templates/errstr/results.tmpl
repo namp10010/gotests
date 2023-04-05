@@ -1,4 +1,0 @@
-{{define "results" -}}
-    {{- /*gotype: github.com/cweill/gotests/internal/models.TData*/ -}}
-    {{range $i, $el := .Results}}{{if $i}}, {{end}}{{Got .}}{{end}}{{if .ReturnsError}}, err{{end}} {{if or .Results .ReturnsError}} := {{end}}
-{{end}}

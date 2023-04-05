@@ -89,6 +89,17 @@ Which will render the Golang template [function.tmpl](templates/testify/function
 
 This is the starting template that will have reference to other templates.
 
+### Debug import.Process
+
+Comment out this and check the output
+```go
+	//format file
+	out, err := imports.Process(tf.Name(), b.Bytes(), nil)
+	if err != nil {
+		return nil, fmt.Errorf("imports.Process: %v", err)
+	}
+```
+
 ### Test
 To make changes to a template for example templates/testify/function.tmpl
 

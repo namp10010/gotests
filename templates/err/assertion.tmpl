@@ -12,7 +12,7 @@
 
 {{define "assertError" -}}
     {{- /*gotype: github.com/cweill/gotests/internal/models.TData*/ -}}
-    assert.EqualErrorf(t, {{if .OnlyReturnsError}}{{template "call" .}}{{else}}err{{end}}, tt.wantErr.Error()
+    assert.EqualError(t, {{if .OnlyReturnsError}}{{template "call" .}}{{else}}err{{end}}, tt.wantErr.Error()
     {{- if or (not .Subtests) .PrintInputs -}}
         , fmt.Sprintf("{{template "message" .}}", {{template "inputs" .}})
     {{- end -}}
