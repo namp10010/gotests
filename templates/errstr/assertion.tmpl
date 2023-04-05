@@ -8,6 +8,7 @@
     {{template "assertNoError" .}}
 {{- end}}
 
+
 {{define "assertError" -}}
     assert.EqualError(t, err, tt.wantErr.Error())
     {{- if .OnlyReturnsOneValue}}
@@ -17,6 +18,7 @@
 
     return
 {{- end}}
+
 
 {{define "assertNoError" -}}
     {{- $f := .}}
@@ -37,3 +39,9 @@
         {{- end}}
     {{- end}}
 {{- end}}
+
+
+{{define "equal"}}assert.Equal{{if or (not .Subtests) .PrintInputs}}f{{end}}{{end}}
+
+
+{{define "msg"}}{{if or (not .Subtests) .PrintInputs}} , "{{template "message" .}}", {{template "inputs" .}}{{end}}{{end}}
