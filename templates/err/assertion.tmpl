@@ -32,11 +32,7 @@
         {{- if .IsWriter}}
             {{template "equal" $f}}(t, tt.{{Want .}}, {{Param .}}.String(){{template "msg" $f}})
         {{- else}}
-            {{- if $f.OnlyReturnsOneValue}}
-                {{template "equal" $f}}(t, tt.{{Want .}}, {{template "inline" $f}}{{template "msg" $f}})
-            {{- else}}
-                {{template "equal" $f}}(t, tt.{{Want .}}, {{Got .}}{{template "msg" $f}})
-            {{- end}}
+            {{template "equal" $f}}(t, tt.{{Want .}}, {{Got .}}{{template "msg" $f}})
         {{- end}}
     {{- end}}
     // TODO assert outcomes

@@ -63,7 +63,6 @@ func {{.TestName}}(t *testing.T) {
 					{{Param .}} := &bytes.Buffer{}
 				{{- end}}
 			{{- end}}
-
             {{template "got" $f}} {{template "call" $f}}
 
             {{template "assertion" $f}}
