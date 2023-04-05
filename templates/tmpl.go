@@ -209,6 +209,115 @@ func FSMustString(useLocal bool, name string) string {
 
 var _escData = map[string]*_escFile{
 
+	"/errstr/assertion.tmpl": {
+		name:    "assertion.tmpl",
+		local:   "errstr/assertion.tmpl",
+		size:    1248,
+		modtime: 1680659968,
+		compressed: `
+H4sIAAAAAAAC/5ySv27bMBDGdz/FVfAQBTa5B8gWo+gSFanRzKx1VAlQZHo8IQgIvXtBWVEoua7revL9
+/32fGGON2jiEQoWAxMa7ArZ9vwIAiHEL8rbx/PaCd9AY/tn9EAffysMrGmtl4xkDB2kcIzllZetrtEHs
+HxSrWznbYzSIJ+SOXNgReRpL6Wc0MItX5XhHBJ/uwRkLcSrHyNi+WMUT5LCgAJHt+DiEru771erPk48+
+m826lzaMXe8Cjkmx+9UpO5RueANItMnAxbFQljPJlbNvo+zK4XdlO8yox72PxqaFMX72nMjKhZgUSQn7
+6qEaRyCYGgG1xgOHo1garvxN1CQ+/y5rDXf3k5XvQD5XeY2i3HJMdg1Wp0XMIsZn5QaFm1mjcdY4HDrz
+dBuaYmGHDfNjWyDlGgSxx8BPGDrLIWvIub+EZzKMtCifgV7rM9RfFak2BeIbk3HNTXmCnGbLE4YF+wJv
+rS8Y+7+8py6n1n9gvsB9Lcf4tK85PL3989l55iOa/v0OAAD//3oyIVbgBAAA
+`,
+	},
+
+	"/errstr/call.tmpl": {
+		name:    "call.tmpl",
+		local:   "errstr/call.tmpl",
+		size:    241,
+		modtime: 1656969383,
+		compressed: `
+H4sIAAAAAAAC/0SOQWrDQAxFryKMFy0YHaDQA3hTSlvatRjLrsCeFo2SEITuHsY4mdWHP2/el/vEs2SG
+LtG6dhHuF7FfwA9OLGfW2sgM+c8Ax/JpekoWYYbunKf6eicBI1qLb7RxxJO7Ul4Yehmg5xVeXgHfSWlj
+Yy2HvZeIAR5/296PitUbzJB0KU2/K+riTuPX9Z9xLN+kQpOkCMTG7vF85C0AAP//ZQi8iPEAAAA=
+`,
+	},
+
+	"/errstr/function.tmpl": {
+		name:    "function.tmpl",
+		local:   "errstr/function.tmpl",
+		size:    2077,
+		modtime: 1680659968,
+		compressed: `
+H4sIAAAAAAAC/4xVzY7bOAw+209BGEURD1L5nqKHXXQWmEtTpMH2UCwWmpj2GCvLWYneQSDw3ReS/Je/
+weQQi5RIfuRHUc6VWDUaIcN/e6kyZmktGhKPXnSuqaAzsNIdgfjRPxNasjmI76bR9KSPPVnmyjnUJfPw
+SdN09traOvM77/EDa8icI2yPSpK3RWtljRkI5mwNy60mmISdN4JXvT5Q0+mMOXXuE3yoYPPF26RBLB7q
+jk5H3EDd0Ev/LA5dWxxesVGqqLsAsWg0odFSFW1XorJi/1WSfCjgE3Pq3YNzYo+WvskWmVcED96u0bXY
+5+DSxMd5begFxA4P2PyHhjlNgrqpQDzZH2T6AwXlpP2jQVXaqEs8QqiCBmw47P0Op43UNV4YJM4F2Sca
+4J2OOGx5k1gmL00xR9VifbH0qHya36WRLRKaECxAk6Y+A7aAdW0RAgbVFbpFxPP4gQhPnHMBhy91ydzK
+4y9LptH1XzG6c6gsMv+aZe9gAOVNY/sF+5xZyxYhehibJ7nH11gEqcuZtIu6DxzFz1TaAGlIfHR5zcwd
+Ft6ofZKEwvu/GzYLAnZoe0V2jPNTanqr9lPIHVJvtH00phtq8Co1PRoD6FUXjPkiFwXst1+3G/itLMGz
+Bgdp0YpAaNUZCGNg1Zl5BAyUPNlv8h8s8zzgWpDsORp5/XtgaQ1EsR0ivzHX6M4tEhhjnGXli6gUKubo
+hOjzOfkjyePBMyjewn8/O+czh2BFYtfr1V3YRGIQI3g/Na7nxE2E03qVn4Oc7vC9dr0zYK6aMJQxNNjp
+iOGwNMwfp5ka9X9K1SOzG13cmTuJcyLOwQ0QiXgRxGIarWcH8xRKboymK2GId2OYjGn+NA1N2Z8Nmc0X
++Ph8IrTi976q0Lj3BBzaILbnVqvT8jrk1/qtxlClHCZk82tl4hXM4EMVGnzeOUilovoeist7CBe/pbf4
+dPsH76bLy4sBzMA5DEfCk5ZwGh7HaPJ/AAAA///Xez1ZHQgAAA==
+`,
+	},
+
+	"/errstr/header.tmpl": {
+		name:    "header.tmpl",
+		local:   "errstr/header.tmpl",
+		size:    142,
+		modtime: 1656969383,
+		compressed: `
+H4sIAAAAAAAC/0TMMQ7CMAyF4d2nsDrBQC7BxIK4gkUebYXiViGb9e6OlAi6/bL1voiM1+rQaYFl1ImU
+iGo+Q9N1KwXePmRE6g941gspuz3fNkMj0mMkKbKWfatNT4dw65cB3K2AHJO2/DhSzv/6BgAA///GzMM9
+jgAAAA==
+`,
+	},
+
+	"/errstr/inline.tmpl": {
+		name:    "inline.tmpl",
+		local:   "errstr/inline.tmpl",
+		size:    49,
+		modtime: 1656969383,
+		compressed: `
+H4sIAAAAAAAC/6quTklNy8xLVVDKzMvJzEtVqq1VqK4uSc0tyEksSVVQSk7MyVFS0AOLpual1NYCAgAA
+//+q60H/MQAAAA==
+`,
+	},
+
+	"/errstr/inputs.tmpl": {
+		name:    "inputs.tmpl",
+		local:   "errstr/inputs.tmpl",
+		size:    177,
+		modtime: 1656969383,
+		compressed: `
+H4sIAAAAAAAC/0yNMaoDMQxE+38KsWz58QECOUCaEMgJFCwvLqwESVsJ3T1YpHAlzWN4416pdSbYOn9O
+0y3CfW9wuUKZb2/Ab4PyPF9GarqyOw6qEWbFnbhGMA76h1/I3t7KQzrbLeUTCvJByVFwkJFoKlAOLe5J
+5/TiWc/fNwAA//94+RPrsQAAAA==
+`,
+	},
+
+	"/errstr/message.tmpl": {
+		name:    "message.tmpl",
+		local:   "errstr/message.tmpl",
+		size:    201,
+		modtime: 1656969383,
+		compressed: `
+H4sIAAAAAAAC/zyN4WqDQBCE//sUiyi0oPsAhT5A/xRpS/9f4mgW9GLuTkNY9t2DB/HXDDPDN6o9BvGg
+ckaMbkRJrVmhKgP5ayL+XU8JMUWz+sakCt+bqd4lXYh/cIZsCHvCf48F/O+mFWZ8DPnbzTB7y0Tugvj0
+5Zd1B6oG50dQJQ1VmOjjk7hzwc1ICLmXgSoxa16/9XZws7wXqi1l+wwAAP//kC65UskAAAA=
+`,
+	},
+
+	"/errstr/results.tmpl": {
+		name:    "results.tmpl",
+		local:   "errstr/results.tmpl",
+		size:    168,
+		modtime: 1656969383,
+		compressed: `
+H4sIAAAAAAAC/1yNTQrCQAyFr/Iosyw9gOBS3HsDoRkJlAy8ma5C7i6pRcFVfr4vee6rVDXBROn7NvoU
+AXc+7SUoOqPIhssVy+ODI9y1omjEDHexNTf3NrBkc85a82DstH4jG1MW8uQ4hMbv0385A3/uUd8BAAD/
+/7BPz2GoAAAA
+`,
+	},
+
 	"/test/call.tmpl": {
 		name:    "call.tmpl",
 		local:   "test/call.tmpl",
@@ -295,7 +404,7 @@ Yy2HvZeIAR5/296PitUbzJB0KU2/K+riTuPX9Z9xLN+kQpOkCMTG7vF85C0AAP//ZQi8iPEAAAA=
 		name:    "function.tmpl",
 		local:   "testify/function.tmpl",
 		size:    2929,
-		modtime: 1657157886,
+		modtime: 1680659804,
 		compressed: `
 H4sIAAAAAAAC/6xWTW/jNhA9y79iIAQLK/DSdy/20GLTIpfNIgm6h0VRMNZIK5SiXHLUwCD43wsO9WXZ
 cjdFc4jFEWfmzbzhE53Lsag0QiqtRUNVo1N47/3KufewvS0bOh5wB2VF39sXsW/q7f4VK6W2ZUNoyW4r
@@ -381,6 +490,12 @@ AXc+7SUoOqPIhssVy+ODI9y1omjEDHexNTf3NrBkc85a82DstH4jG1MW8uQ4hMbv0385A3/uUd8BAAD/
 		isDir: true,
 	},
 
+	"/errstr": {
+		name:  "errstr",
+		local: `errstr`,
+		isDir: true,
+	},
+
 	"/test": {
 		name:  "test",
 		local: `test`,
@@ -403,6 +518,17 @@ AXc+7SUoOqPIhssVy+ODI9y1omjEDHexNTf3NrBkc85a82DstH4jG1MW8uQ4hMbv0385A3/uUd8BAAD/
 var _escDirs = map[string][]os.FileInfo{
 
 	"./": {},
+
+	"errstr": {
+		_escData["/errstr/assertion.tmpl"],
+		_escData["/errstr/call.tmpl"],
+		_escData["/errstr/function.tmpl"],
+		_escData["/errstr/header.tmpl"],
+		_escData["/errstr/inline.tmpl"],
+		_escData["/errstr/inputs.tmpl"],
+		_escData["/errstr/message.tmpl"],
+		_escData["/errstr/results.tmpl"],
+	},
 
 	"test": {
 		_escData["/test/call.tmpl"],

@@ -61,6 +61,35 @@ Available options:
 ```
 
 ## Make change and test
+
+### Install dependencies
+
+```bash
+go install github.com/mjibson/esc@latest
+```
+
+### Where to change
+
+The entry to the test generation is [render.go](internal/render/render.go)
+
+```go
+func (r *Render) TestFunction() error {
+	return r.tmpls.ExecuteTemplate(w, "function", models.TData{
+		Function:       f,
+		PrintInputs:    printInputs,
+		Subtests:       subtests,
+		Parallel:       parallel,
+		Named:          named,
+		TemplateParams: params,
+	})
+}
+```
+
+Which will render the Golang template [function.tmpl](templates/testify/function.tmpl).
+
+This is the starting template that will have reference to other templates.
+
+### Test
 To make changes to a template for example templates/testify/function.tmpl
 
 * Change the template

@@ -1,0 +1,40 @@
+{{define "assertion" -}}
+    {{- /*gotype: github.com/cweill/gotests/internal/models.TData*/ -}}
+    {{- if .ReturnsError}}
+        if tt.wantErr != nil {
+        {{template "assertError" .}}
+        }
+    {{- end}}
+
+    {{template "assertNoError" .}}
+{{- end}}
+
+{{define "assertError" -}}
+    assert.EqualError(t, err, tt.wantErr.Error())
+    {{- if .OnlyReturnsOneValue}}
+        assert.Nil(t, {{Got .}})
+    {{- end}}
+    // TODO assert side effects
+
+    return
+{{- end}}
+
+{{define "assertNoError" -}}
+    {{- $f := .}}
+    assert.NoError(t, err)
+    {{- if .OnlyReturnsOneValue}}
+        {{template "equal" .}}(t, tt.{{Want .}}, {{template "inline" .}}{{template "msg" .}})
+    {{- else}}
+        {{- range .TestResults}}
+            {{- if .IsWriter}}
+                {{template "equal" $f}}(t, tt.{{Want .}}, {{Param .}}.String(){{template "msg" $f}})
+            {{- else}}
+                {{- if $f.OnlyReturnsOneValue}}
+                    {{template "equal" $f}}(t, tt.{{Want .}}, {{template "inline" $f}}{{template "msg" $f}})
+                {{- else}}
+                    {{template "equal" $f}}(t, tt.{{Want .}}, {{Got .}}{{template "msg" $f}})
+                {{- end}}
+            {{- end}}
+        {{- end}}
+    {{- end}}
+{{- end}}
