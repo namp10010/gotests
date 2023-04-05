@@ -10,7 +10,6 @@ import (
 
 	"github.com/cweill/gotests/internal/models"
 	"github.com/cweill/gotests/internal/render"
-	"golang.org/x/tools/imports"
 )
 
 type Options struct {
@@ -57,11 +56,11 @@ func (o *Options) Process(head *models.Header, funcs []*models.Function) ([]byte
 	}
 
 	// format file
-	out, err := imports.Process(tf.Name(), b.Bytes(), nil)
-	if err != nil {
-		return nil, fmt.Errorf("imports.Process: %v", err)
-	}
-	return out, nil
+	//out, err := imports.Process(tf.Name(), b.Bytes(), nil)
+	//if err != nil {
+	//	return nil, fmt.Errorf("imports.Process: %v", err)
+	//}
+	return b.Bytes(), nil
 }
 
 func (o *Options) providesTemplateData() bool {
