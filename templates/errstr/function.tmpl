@@ -1,4 +1,5 @@
 {{define "function"}}
+{{- /*gotype: github.com/cweill/gotests/internal/models.TData*/ -}}
 {{- $f := .}}
 
 func {{.TestName}}(t *testing.T) {
@@ -65,9 +66,9 @@ func {{.TestName}}(t *testing.T) {
 			{{- if and (not .OnlyReturnsError) (not .OnlyReturnsOneValue) }}
 				{{template "results" $f}} {{template "call" $f}}
 			{{- end}}
-			{{- if .ReturnsError}}
-                {{template "assertion" $f}}
-			{{- end}}
+
+            {{template "assertion" $f}}
+
 		{{- if .Subtests }} }) {{- end -}}
 	}
 }
