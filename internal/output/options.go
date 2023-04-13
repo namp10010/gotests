@@ -62,6 +62,8 @@ func (o *Options) Process(head *models.Header, funcs []*models.Function) ([]byte
 		return nil, fmt.Errorf("imports.Process: %v", err)
 	}
 	return out, nil
+
+	//return b.Bytes(), nil
 }
 
 func (o *Options) providesTemplateData() bool {

@@ -15,7 +15,7 @@
 {{define "assertError" -}}
     {{- /*gotype: github.com/cweill/gotests/internal/models.TData*/ -}}
     require.NotNil(t, err)
-    assert.Contains(t, err.Error(), tt.wantErr.Error())
+    assert.Contains(t, err.Error(), tt.wantErr.Error()
     {{- if or (not .Subtests) .PrintInputs -}}
         , fmt.Sprintf("{{template "message" .}}", {{template "inputs" .}})
     {{- end -}}
