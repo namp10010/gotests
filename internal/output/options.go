@@ -7,6 +7,7 @@ import (
 	"golang.org/x/tools/imports"
 	"io"
 	"io/ioutil"
+	"log"
 	"os"
 
 	"github.com/cweill/gotests/internal/models"
@@ -59,11 +60,11 @@ func (o *Options) Process(head *models.Header, funcs []*models.Function) ([]byte
 	// format file
 	out, err := imports.Process(tf.Name(), b.Bytes(), nil)
 	if err != nil {
-		return nil, fmt.Errorf("imports.Process: %v", err)
+		log.Printf("warn: imports.Process: %v\n", err)
+		return b.Bytes(), nil
 	}
-	return out, nil
 
-	//return b.Bytes(), nil
+	return out, nil
 }
 
 func (o *Options) providesTemplateData() bool {
